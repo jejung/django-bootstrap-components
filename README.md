@@ -1,2 +1,3 @@
-# django-bootstrap-components
-Some useful ui components to render using bootstrap.
+# Django Bootstrap Components
+
+This is a development version. DO NOT USE IT.
