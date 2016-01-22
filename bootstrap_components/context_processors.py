@@ -4,9 +4,9 @@
 """ The context_processors defined for handling the components necessities.
 """
 
-from django.conf import settings
+from bootstrap_components.conf import settings
 
-def common(request):
+def commons(request):
     """ Put common needed data on the context. Actually it adds:
     settings - The Django settings module.
     """

@@ -19,7 +19,7 @@ Quick start.
 
    All the necessary static files will be included, you just need to execute 
    "python manage.py collectstatic" to serve the files.
-
+   
 2. Include the bootstrap_components URLConf in your project urls.py. It is
    required because some components make AJAX requests to update data and
    handle events.

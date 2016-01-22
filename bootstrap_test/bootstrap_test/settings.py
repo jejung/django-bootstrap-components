@@ -25,7 +25,7 @@ SECRET_KEY = 'ib9k#c+v*9a-v3k@#b*okj1urlr9!j4m%v2*1dbzv(6k1c0h#m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -65,7 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'bootstrap_components.context_processors.common',
+                'bootstrap_components.context_processors.commons',
             ],
         },
     },
@@ -122,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+BOOTSTRAP = {
+    'FROM': 'static',
+}
