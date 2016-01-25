@@ -8,7 +8,7 @@ from bootstrap_components.conf import settings
 
 def commons(request):
     """ Put common needed data on the context. Actually it adds:
-    settings - The Django settings module.
+    settings - The Django settings object.
     """
     return {
         'settings': settings,

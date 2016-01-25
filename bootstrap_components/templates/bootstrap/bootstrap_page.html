@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap_components %}
 <!DOCTYPE html>
 <html lang="{{ settings.LANGUAGE }}">
     <head>
@@ -30,7 +31,25 @@
     </head>
     <body>
         {% block body %}
-        <h1>Bootstrap Components working!</h1>
+        {% if settings.DEBUG %}
+        <div class="page-header">
+        <h1>Bootstrap Components working if this is a header and ...</h1>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            ... this is a Dropdown!
+            {% bootstrap_icon 'glyphicon-pencil' %}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        
+        {% endif %}
         {% endblock body %}
         {% if settings.BOOTSTRAP.FROM == 'CDN' %}
         {% if settings.DEBUG %}

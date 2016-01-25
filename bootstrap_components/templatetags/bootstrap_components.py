@@ -22,3 +22,19 @@ def bootstrap_page(context):
     to do that.
     """
     return context
+
+@register.inclusion_tag('bootstrap/icon.html', takes_context=False)
+def bootstrap_icon(icon):
+    """ Render a simple icon on the page like <span class="glyphicon *icon" />.
+    Please consider reading the usage notes as described on the Bootstrap 
+    documentation: http://getbootstrap.com/components/#glyphicons-how-to-use 
+    An aditional statement is important on Glyphicons, as the Bootstrap 
+    documentation says:
+    "Glyphicons Halflings are normally not available for free, but their creator 
+    has made them available for Bootstrap free of cost. As a thank you, we only 
+    ask that you include a link back to Glyphicons whenever possible." 
+    Link here: http://glyphicons.com/
+    """
+    return {
+        'icon': icon,
+    }
